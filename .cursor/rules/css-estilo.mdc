@@ -1,0 +1,47 @@
+---
+description: Padrões de CSS do EcoVocação (cores, classes e responsividade)
+globs: "css/**/*.css"
+alwaysApply: false
+---
+# CSS – EcoVocação
+
+## 1. Objetivo
+Manter o visual do site igual em todas as páginas, usando um único arquivo css/style.css.
+
+## 2. Contexto do projeto
+- Só existe um arquivo de estilo: css/style.css, ligado com `<link>` em todas as páginas.
+- O arquivo começa com o reset `* { margin: 0; padding: 0; box-sizing: border-box; }`.
+- Fonte: Arial, Helvetica, sans-serif.
+
+## 3. Regras
+- Usar só as cores da identidade visual:
+  - verde escuro `#1b5e20` (header, footer, títulos)
+  - verde `#2e7d32` (destaques e bordas)
+  - verde claro `#f1f8e9` (fundo da página)
+  - amarelo `#f9a825` (hover dos botões)
+  - branco `#ffffff` e texto `#222222`
+- Nomes de classes em português, minúsculas e com hífen: `.caixa-texto`, `.card`, `.botao`, `.galeria-item`.
+- Antes de criar uma classe nova, ver se já existe uma parecida (`.caixa-texto`, `.cards`, `.card`, `.botao`, `.banner`, `.obs`).
+- Layout com flexbox (`display: flex`, `flex-wrap`, `gap`).
+- Responsividade com media query no fim do arquivo; o site tem que funcionar no celular.
+- Colocar um comentário antes de cada bloco novo (ex.: `/* galeria */`).
+- Efeitos leves com `transition` e `transform: scale()`, como nos cards.
+
+## 4. Exemplo
+```css
+/* galeria */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+```
+
+## 5. Erros a evitar
+- Não usar `!important`.
+- Não criar cores novas fora da paleta.
+- Não usar Bootstrap, Tailwind ou outro framework.
+- Não mudar estilos que já existem (header, menu, footer) sem a equipe pedir.
+
+## 6. Perguntas
+Se precisar de uma cor ou componente novo, pergunte antes.
