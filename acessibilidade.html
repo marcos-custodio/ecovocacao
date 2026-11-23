@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Medidas de inclusão para pessoas com deficiência no EcoVocação.">
+    <meta name="description" content="Recursos e medidas de acessibilidade do EcoVocação para pessoas com deficiência.">
     <title>Acessibilidade - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
+        </div>
+
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
         </div>
 
         <nav aria-label="Menu principal">
@@ -21,7 +33,7 @@
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="impacto.html">Impacto</a></li>
-                <li><a href="acessibilidade.html">Acessibilidade</a></li>
+                <li><a href="acessibilidade.html" aria-current="page">Acessibilidade</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="midia.html">Mídia</a></li>
                 <li><a href="noticias.html">Notícias</a></li>
@@ -31,21 +43,139 @@
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
             <h2>Acessibilidade</h2>
-            <p>Aqui vão ficar as medidas de inclusão para pessoas com deficiência.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+            <p>Um site feito para todo mundo conseguir usar</p>
         </section>
+
+        <!-- compromisso -->
+        <section class="caixa-texto">
+            <h2>Nosso compromisso</h2>
+            <p>As pessoas com deficiência são o público prioritário do EcoVocação. Por isso, seguimos as recomendações das Diretrizes de Acessibilidade para Conteúdo Web (WCAG) e testamos o site com o teclado, com validadores e em telas de vários tamanhos.</p>
+        </section>
+
+        <!-- recursos do site -->
+        <section class="caixa-texto">
+            <h2>Recursos disponíveis no site</h2>
+            <p>No topo de todas as páginas tem três botões:</p>
+            <ul>
+                <li><b>A+</b> aumenta o tamanho da letra.</li>
+                <li><b>A-</b> diminui o tamanho da letra.</li>
+                <li><b>Alto contraste</b> deixa o fundo preto e o texto em branco e amarelo.</li>
+            </ul>
+            <p>A sua escolha fica salva no navegador, então vale para todas as páginas e continua quando você voltar ao site.</p>
+            <p>Também tem o link <b>"Pular para o conteúdo principal"</b>, que aparece quando você aperta Tab logo que a página abre. Ele leva direto para o conteúdo, sem precisar passar pelo menu todo.</p>
+        </section>
+
+        <!-- medidas tecnicas -->
+        <section class="temas">
+            <h2>O que fizemos no código</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Imagens</h3>
+                    <p>Todas as imagens têm texto alternativo (alt) que descreve o que aparece nelas, para quem usa leitor de tela.</p>
+                </article>
+                <article class="card">
+                    <h3>Teclado</h3>
+                    <p>Dá para usar o site inteiro só com o teclado. O item com foco ganha um contorno amarelo e verde bem visível.</p>
+                </article>
+                <article class="card">
+                    <h3>Contraste</h3>
+                    <p>As cores foram escolhidas para ter contraste alto entre o texto e o fundo, ajudando quem tem baixa visão.</p>
+                </article>
+                <article class="card">
+                    <h3>Estrutura</h3>
+                    <p>Usamos tags semânticas (header, nav, main, section, article e footer), títulos em ordem e lang="pt-BR".</p>
+                </article>
+                <article class="card">
+                    <h3>Formulário</h3>
+                    <p>Cada campo tem um label ligado a ele, e as mensagens de erro aparecem em texto, não só em cor.</p>
+                </article>
+                <article class="card">
+                    <h3>Vídeo e áudio</h3>
+                    <p>O vídeo tem legendas e o podcast tem transcrição completa. Nada começa a tocar sozinho.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- tabela de atalhos -->
+        <section class="caixa-texto">
+            <h2>Como navegar pelo teclado</h2>
+            <div class="tabela-rolagem">
+                <table>
+                    <caption>Teclas para navegar no site</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Tecla</th>
+                            <th scope="col">O que faz</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tab</td>
+                            <td>Vai para o próximo link, botão ou campo</td>
+                        </tr>
+                        <tr>
+                            <td>Shift + Tab</td>
+                            <td>Volta para o item anterior</td>
+                        </tr>
+                        <tr>
+                            <td>Enter</td>
+                            <td>Abre o link ou aperta o botão</td>
+                        </tr>
+                        <tr>
+                            <td>Espaço</td>
+                            <td>Marca caixas de seleção e dá play/pause no vídeo e no áudio</td>
+                        </tr>
+                        <tr>
+                            <td>Setas</td>
+                            <td>Escolhem uma opção nos botões de rádio e nas listas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- leis -->
+        <section class="caixa-texto">
+            <h2>O que diz a lei</h2>
+            <p><b>Lei Brasileira de Inclusão (Lei nº 13.146/2015):</b> garante os direitos das pessoas com deficiência, inclusive o acesso à informação e a sites acessíveis.</p>
+            <p><b>Lei de Cotas (Lei nº 8.213/1991, artigo 93):</b> empresas com 100 ou mais funcionários precisam reservar de 2% a 5% das vagas para pessoas com deficiência ou reabilitadas.</p>
+            <p class="obs">Fontes: <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" rel="noopener">Lei nº 13.146/2015</a> e <a href="https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm" target="_blank" rel="noopener">Lei nº 8.213/1991</a>, no site do Planalto (abrem em nova aba).</p>
+        </section>
+
+        <!-- dicas pra empresas -->
+        <section class="caixa-texto">
+            <h2>Dicas para empresas que querem contratar PCD</h2>
+            <ol>
+                <li>Publique vagas em sites acessíveis e com descrição clara das tarefas.</li>
+                <li>Pergunte ao candidato quais recursos ele precisa na entrevista.</li>
+                <li>Adapte o local de trabalho: rampas, banheiros, softwares leitores de tela.</li>
+                <li>Treine a equipe para receber bem o novo colega.</li>
+                <li>Pense em plano de carreira, não só em cumprir a cota.</li>
+            </ol>
+        </section>
+
+        <!-- canal pra reclamar -->
+        <section class="caixa-texto chamada">
+            <h2>Achou alguma barreira?</h2>
+            <p>Se alguma parte do site não funcionou bem para você, conte pra gente. Sua mensagem ajuda a melhorar o EcoVocação.</p>
+            <a href="contato.html" class="botao">Relatar um problema</a>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

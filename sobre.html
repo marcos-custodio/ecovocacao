@@ -3,22 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="História, missão, visão e valores do EcoVocação.">
+    <meta name="description" content="História, missão, visão, valores e ODS do EcoVocação.">
     <title>Sobre - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
         </div>
 
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
+        </div>
+
         <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="sobre.html" aria-current="page">Sobre</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="impacto.html">Impacto</a></li>
                 <li><a href="acessibilidade.html">Acessibilidade</a></li>
@@ -31,21 +43,135 @@
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
-            <h2>Sobre nós</h2>
-            <p>Aqui vai ficar a história, a missão, a visão e os valores do EcoVocação.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
+            <h2>Sobre o EcoVocação</h2>
+            <p>Quem somos, o que queremos e no que acreditamos</p>
         </section>
+
+        <!-- historia -->
+        <section class="caixa-texto">
+            <h2>Nossa história</h2>
+            <p>O EcoVocação começou em 2026 como um projeto de alunos do curso de Análise e Desenvolvimento de Sistemas da Fatec São Caetano do Sul. A ideia surgiu de uma pergunta simples: <b>por que é tão difícil achar informação sobre trabalhos que ajudam o meio ambiente?</b></p>
+            <p>Pesquisando, a gente percebeu um segundo problema: pessoas com deficiência ainda têm muito menos oportunidades no mercado de trabalho, mesmo com a Lei de Cotas, e muitos sites de vagas não são acessíveis.</p>
+            <p>Então decidimos juntar os dois temas em um lugar só: um site com informação sobre empregos verdes, projetos sociais e inclusão, feito desde o começo para ser acessível.</p>
+            <p class="obs">O EcoVocação é uma organização fictícia, criada para fins acadêmicos.</p>
+        </section>
+
+        <!-- missao visao e valores em cards -->
+        <section class="temas">
+            <h2>Missão, visão e valores</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Missão</h3>
+                    <p>Conectar pessoas a trabalhos com impacto positivo, dando prioridade à inclusão de pessoas com deficiência.</p>
+                </article>
+                <article class="card">
+                    <h3>Visão</h3>
+                    <p>Ser uma referência no ABC Paulista em informação acessível sobre empregos verdes e economia solidária.</p>
+                </article>
+                <article class="card">
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Inclusão e acessibilidade</li>
+                        <li>Respeito ao meio ambiente</li>
+                        <li>Trabalho digno</li>
+                        <li>Informação com fonte</li>
+                        <li>Cooperação</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- ods da onu -->
+        <section class="caixa-texto">
+            <h2>Objetivos de Desenvolvimento Sustentável (ODS)</h2>
+            <p>O EcoVocação se baseia em alguns dos 17 ODS da Agenda 2030 da ONU:</p>
+            <div class="tabela-rolagem">
+                <table>
+                    <caption>ODS ligados ao EcoVocação</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">ODS</th>
+                            <th scope="col">Como o site se relaciona</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ODS 7 - Energia limpa e acessível</td>
+                            <td>Mostra profissões em energia solar e eólica.</td>
+                        </tr>
+                        <tr>
+                            <td>ODS 8 - Trabalho decente e crescimento econômico</td>
+                            <td>Divulga oportunidades de trabalho digno e cooperativas.</td>
+                        </tr>
+                        <tr>
+                            <td>ODS 10 - Redução das desigualdades</td>
+                            <td>Dá prioridade à inclusão de pessoas com deficiência.</td>
+                        </tr>
+                        <tr>
+                            <td>ODS 12 - Consumo e produção responsáveis</td>
+                            <td>Fala de reciclagem, coleta seletiva e consumo consciente.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="obs">Fonte: <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" rel="noopener">Nações Unidas Brasil - Objetivos de Desenvolvimento Sustentável</a> (abre em nova aba).</p>
+        </section>
+
+        <!-- publico do site -->
+        <section class="caixa-texto">
+            <h2>Para quem é o site</h2>
+            <div class="tabela-rolagem">
+                <table>
+                    <caption>Perfis de público do EcoVocação</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Perfil</th>
+                            <th scope="col">Necessidade</th>
+                            <th scope="col">Como o site ajuda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Profissional buscando emprego verde (incluindo PCD)</td>
+                            <td>Não sabe quais carreiras existem nem onde procurar</td>
+                            <td>Reúne informações sobre carreiras verdes em um site acessível</td>
+                        </tr>
+                        <tr>
+                            <td>Empresa sustentável</td>
+                            <td>Quer contratar de forma inclusiva</td>
+                            <td>Traz orientações sobre inclusão de PCD</td>
+                        </tr>
+                        <tr>
+                            <td>Empreendedor social</td>
+                            <td>Projeto com pouca visibilidade</td>
+                            <td>Espaço para divulgar projetos e encontrar parceiros</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- chamada pra acao -->
+        <section class="caixa-texto chamada">
+            <h2>Conheça os projetos</h2>
+            <p>Veja iniciativas reais que já unem sustentabilidade, trabalho e inclusão.</p>
+            <a href="projetos.html" class="botao">Ver projetos</a>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

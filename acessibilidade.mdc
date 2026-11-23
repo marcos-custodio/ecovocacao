@@ -1,0 +1,42 @@
+---
+description: Regras de acessibilidade (WCAG) do EcoVocação. Use sempre que criar ou alterar páginas, imagens, formulários ou mídia.
+alwaysApply: false
+---
+# Acessibilidade – EcoVocação
+
+## 1. Objetivo
+O público prioritário do EcoVocação são pessoas com deficiência, então o site precisa ser usável com leitor de tela, só com teclado e por pessoas com baixa visão.
+
+## 2. Contexto do projeto
+- Meta: acessibilidade ≥ 90 no Lighthouse e nenhum erro no WAVE.
+- A página acessibilidade.html explica as medidas que o site usa.
+
+## 3. Regras
+- Toda imagem com `alt` que descreve o que aparece (ex.: "Catadora separando garrafas PET na cooperativa"). Nunca "imagem" ou "foto".
+- Imagem só decorativa: `alt=""`.
+- Imagens com `width` e `height`.
+- Menu com `aria-label="Menu principal"`.
+- Formulários: todo campo com `<label for="...">` ligado ao `id`; usar `required`, `type="email"`, `type="tel"` e `pattern` quando fizer sentido.
+- Mensagens de erro em texto (não só cor vermelha) e perto do campo.
+- Vídeo com `controls`, sem autoplay; `<iframe>` com `title` (ex.: `title="Vídeo sobre reciclagem"`).
+- Áudio com `controls` e, se possível, transcrição.
+- Links com texto que faz sentido sozinho (nada de "clique aqui").
+- Contraste mínimo AA entre texto e fundo; usar as cores da paleta.
+- Tudo que é clicável tem que funcionar com Tab e Enter, com foco visível.
+
+## 4. Exemplo
+```html
+<figure>
+    <img src="img/cooperativa.jpg" alt="Grupo de catadores separando papelão em uma cooperativa" width="400" height="300">
+    <figcaption>Cooperativa de reciclagem (foto: Unsplash).</figcaption>
+</figure>
+```
+
+## 5. Erros a evitar
+- Não tirar o contorno de foco (`outline: none`) sem colocar outro no lugar.
+- Não usar só cor para passar informação.
+- Não colocar texto dentro de imagem.
+- Não usar conteúdo que pisca.
+
+## 6. Perguntas
+Se não tiver certeza da descrição de uma imagem, pergunte à equipe.

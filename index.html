@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="EcoVocação: site sobre sustentabilidade, empregos verdes e inclusão de pessoas com deficiência.">
     <title>EcoVocação - Sustentabilidade e Impacto Social</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
 
     <!-- topo do site com logo e menu -->
     <header>
@@ -16,9 +20,16 @@
             <h1>EcoVocação</h1>
         </div>
 
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
+        </div>
+
         <nav aria-label="Menu principal">
             <ul>
-                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html" aria-current="page">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="impacto.html">Impacto</a></li>
@@ -32,7 +43,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
 
         <!-- banner -->
         <section class="banner">
@@ -45,7 +56,7 @@
         <section class="caixa-texto">
             <h2>O que é o EcoVocação?</h2>
             <p>O EcoVocação é um site que junta <b>sustentabilidade</b> e <b>empregabilidade</b>. Aqui você encontra informações sobre empregos verdes, como reciclagem e energias renováveis, além de projetos de economia solidária e consumo consciente.</p>
-            <p>Nosso foco principal é a <b>inclusão de pessoas com deficiência (PCD)</b> no mercado de trabalho.</p>
+            <p>Nosso foco principal é a <b>inclusão de pessoas com deficiência (PCD)</b> no mercado de trabalho. Por isso o site foi feito para funcionar com leitor de tela, só com o teclado e com bom contraste.</p>
         </section>
 
         <!-- cards com os temas -->
@@ -53,16 +64,22 @@
             <h2>Nossos temas</h2>
             <div class="cards">
                 <article class="card">
+                    <img src="img/energia-solar.svg" alt="Ilustração de uma casa com placas solares no telhado e um instalador subindo a escada" width="400" height="300">
                     <h3>Empregos verdes</h3>
-                    <p>Profissões ligadas ao meio ambiente, como reciclagem e energia solar.</p>
+                    <p>Profissões ligadas ao meio ambiente, como reciclagem, energia solar e energia eólica.</p>
+                    <a href="projetos.html">Ver projetos</a>
                 </article>
                 <article class="card">
+                    <img src="img/inclusao-trabalho.svg" alt="Ilustração de uma pessoa em cadeira de rodas trabalhando no computador em um escritório" width="400" height="300">
                     <h3>Inclusão PCD</h3>
-                    <p>Dicas para empresas e candidatos sobre contratação inclusiva.</p>
+                    <p>Dicas para empresas e candidatos sobre contratação inclusiva e acessibilidade.</p>
+                    <a href="acessibilidade.html">Ver acessibilidade</a>
                 </article>
                 <article class="card">
+                    <img src="img/cooperativa-reciclagem.svg" alt="Ilustração de duas pessoas de uniforme verde separando garrafas e papelão numa esteira de cooperativa" width="400" height="300">
                     <h3>Economia solidária</h3>
                     <p>Cooperativas e projetos sociais que geram renda para a comunidade.</p>
+                    <a href="impacto.html">Ver dados e impacto</a>
                 </article>
             </div>
         </section>
@@ -70,39 +87,51 @@
         <!-- tabela com numeros (dados ficticios) -->
         <section class="caixa-texto">
             <h2>Nossos números</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Quantidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Vagas verdes divulgadas</td>
-                        <td>1.200</td>
-                    </tr>
-                    <tr>
-                        <td>Vagas para PCD</td>
-                        <td>420</td>
-                    </tr>
-                    <tr>
-                        <td>Empresas parceiras</td>
-                        <td>80</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="obs">* Dados fictícios, usados só para o MVP.</p>
+            <div class="tabela-rolagem">
+                <table>
+                    <caption>Resultados da plataforma EcoVocação em 2026</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vagas verdes divulgadas</td>
+                            <td>1.200</td>
+                        </tr>
+                        <tr>
+                            <td>Vagas para PCD</td>
+                            <td>420</td>
+                        </tr>
+                        <tr>
+                            <td>Empresas parceiras</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="obs">* Dados fictícios, porque o EcoVocação é um projeto acadêmico. Os dados reais sobre o tema, com fonte, estão na página <a href="impacto.html">Impacto</a>.</p>
+        </section>
+
+        <!-- chamada pra acao -->
+        <section class="caixa-texto chamada">
+            <h2>Quer fazer parte?</h2>
+            <p>Se você procura um trabalho com propósito, tem uma empresa que quer contratar de forma inclusiva ou um projeto social para divulgar, fale com a gente.</p>
+            <a href="contato.html" class="botao">Entrar em contato</a>
         </section>
 
     </main>
 
     <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

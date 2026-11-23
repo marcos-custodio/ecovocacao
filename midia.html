@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vídeos, áudios e conteúdos do EcoVocação.">
+    <meta name="description" content="Vídeo com legendas, podcast com transcrição e mapa sobre trabalho e sustentabilidade.">
     <title>Mídia - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
+        </div>
+
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
         </div>
 
         <nav aria-label="Menu principal">
@@ -23,7 +35,7 @@
                 <li><a href="impacto.html">Impacto</a></li>
                 <li><a href="acessibilidade.html">Acessibilidade</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="midia.html">Mídia</a></li>
+                <li><a href="midia.html" aria-current="page">Mídia</a></li>
                 <li><a href="noticias.html">Notícias</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
@@ -31,21 +43,93 @@
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
             <h2>Mídia</h2>
-            <p>Aqui vão ficar os vídeos, os áudios e os conteúdos incorporados.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+            <p>Vídeo, podcast e mapa sobre trabalho e sustentabilidade</p>
         </section>
+
+        <!-- video proprio -->
+        <section class="caixa-texto">
+            <h2>Vídeo: Empregos verdes em 1 minuto e meio</h2>
+            <p>Vídeo feito pela equipe EcoVocação com as ilustrações do site. Ele tem legendas em português: é só ativar no botão de legendas do player.</p>
+            <div class="midia-box">
+                <video id="videoEco" controls poster="img/poster-video.jpg" width="960" height="540" preload="metadata">
+                    <source src="midia/video-empregos-verdes.mp4" type="video/mp4">
+                    <track src="midia/legendas-video.vtt" kind="captions" srclang="pt-BR" label="Português">
+                    Seu navegador não consegue mostrar o vídeo. <a href="midia/video-empregos-verdes.mp4">Baixe o vídeo aqui</a>.
+                </video>
+            </div>
+            <!-- botoes que controlam o video com javascript -->
+            <div class="botoes-midia">
+                <button type="button" id="btnPlayPause" class="botao-acao">▶ Play</button>
+                <button type="button" id="btnPular" class="botao-acao">Pular para 1:30</button>
+            </div>
+            <p class="obs">Fonte dos dados citados no vídeo: Agência Gov (2024), Absolar (2026) e Lei nº 8.213/1991. Mais detalhes na página <a href="impacto.html">Impacto</a>.</p>
+        </section>
+
+        <!-- podcast -->
+        <section class="caixa-texto">
+            <h2>Podcast: EcoCast - Episódio 1</h2>
+            <p><b>O que são empregos verdes?</b> Uma conversa rápida (cerca de 1 minuto e 20 segundos) entre a Ana e o Léo, com vozes geradas por inteligência artificial.</p>
+            <audio id="audioEco" controls preload="metadata">
+                <source src="midia/podcast-ecocast-ep1.mp3" type="audio/mpeg">
+                Seu navegador não consegue tocar o áudio. <a href="midia/podcast-ecocast-ep1.mp3">Baixe o áudio aqui</a>.
+            </audio>
+
+            <!-- transcricao pra quem nao escuta -->
+            <details class="transcricao">
+                <summary>Ler a transcrição do podcast</summary>
+                <p><b>Ana:</b> Olá! Bem-vindos ao EcoCast, o podcast do EcoVocação. Eu sou a Ana.</p>
+                <p><b>Léo:</b> E eu sou o Léo. Hoje a pergunta é: o que são empregos verdes?</p>
+                <p><b>Ana:</b> Empregos verdes são trabalhos que ajudam a diminuir o impacto no meio ambiente. Por exemplo: reciclagem, energia solar, energia eólica e agricultura sustentável.</p>
+                <p><b>Léo:</b> E não é só para engenheiro, né?</p>
+                <p><b>Ana:</b> Não! Tem vaga para instalador de painel solar, técnico de manutenção, educador ambiental e muito mais. Muitas dessas profissões pedem um curso técnico ou de qualificação.</p>
+                <p><b>Léo:</b> E os catadores de materiais recicláveis também fazem parte disso.</p>
+                <p><b>Ana:</b> Com certeza. São mais de oitocentas mil pessoas no Brasil. Quando eles se organizam em cooperativas, a renda e as condições de trabalho melhoram.</p>
+                <p><b>Léo:</b> Outra coisa importante é a inclusão. Pessoas com deficiência ainda têm muito menos oportunidades no mercado de trabalho.</p>
+                <p><b>Ana:</b> É verdade. A Lei de Cotas existe desde 1991, mas muitas empresas ainda não cumprem. Por isso o EcoVocação dá prioridade para a acessibilidade.</p>
+                <p><b>Léo:</b> E o que quem está ouvindo pode fazer hoje?</p>
+                <p><b>Ana:</b> Três coisas: separar o lixo reciclável em casa, valorizar o trabalho dos catadores e procurar cursos na área de sustentabilidade.</p>
+                <p><b>Léo:</b> Ótimo! Esse foi o EcoCast. Até o próximo episódio!</p>
+            </details>
+        </section>
+
+        <!-- video do youtube (atividade da aula 10) -->
+        <section class="caixa-texto">
+            <h2>Vídeo do YouTube: conheça a Coopamare</h2>
+            <p>A Coopamare é a cooperativa de catadores mais antiga em funcionamento no Brasil. Neste vídeo, o cofundador Dudu Catador conta a história dela e fala sobre reciclagem.</p>
+            <div class="midia-box">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y6wcofZcw8Y" title="Vídeo do YouTube: Conheça a Coopamare, seu cofundador Dudu Catador e saiba mais sobre a reciclagem" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="botoes-midia">
+                <button type="button" id="btnAssisti" class="botao-acao">Já assisti ao vídeo</button>
+            </div>
+            <p class="obs">Fonte: canal no YouTube. Se o vídeo não carregar, <a href="https://www.youtube.com/watch?v=Y6wcofZcw8Y" target="_blank" rel="noopener">assista direto no YouTube (abre em nova aba)</a>.</p>
+        </section>
+
+        <!-- mapa com iframe -->
+        <section class="caixa-texto">
+            <h2>Mapa: onde descartar recicláveis</h2>
+            <p>Os ecopontos recebem materiais como entulho, móveis velhos e recicláveis. Veja no mapa os ecopontos de São Caetano do Sul, perto da Fatec.</p>
+            <div class="midia-box">
+                <iframe width="560" height="350" src="https://maps.google.com/maps?q=ecoponto%20S%C3%A3o%20Caetano%20do%20Sul&amp;output=embed" title="Mapa do Google com ecopontos em São Caetano do Sul" loading="lazy"></iframe>
+            </div>
+            <p class="obs">Fonte: Google Maps. Confira os horários no site da prefeitura da sua cidade.</p>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

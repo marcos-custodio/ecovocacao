@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Notícias e artigos sobre sustentabilidade e inclusão.">
+    <meta name="description" content="Notícias sobre empregos verdes, reciclagem e inclusão de pessoas com deficiência.">
     <title>Notícias - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
+        </div>
+
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
         </div>
 
         <nav aria-label="Menu principal">
@@ -24,28 +36,80 @@
                 <li><a href="acessibilidade.html">Acessibilidade</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
                 <li><a href="midia.html">Mídia</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="noticias.html" aria-current="page">Notícias</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="orcamento_hospedagem.html">Orçamento</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
             <h2>Notícias</h2>
-            <p>Aqui vão ficar as notícias e os artigos sobre sustentabilidade e inclusão.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+            <p>O que está acontecendo com o trabalho verde e a inclusão no Brasil</p>
         </section>
+
+        <!-- explicacao -->
+        <section class="caixa-texto">
+            <h2>Como escolhemos as notícias</h2>
+            <p>Selecionamos notícias de veículos confiáveis e escrevemos um resumo curto com as nossas palavras. Para ler a matéria completa, clique no link de cada uma.</p>
+        </section>
+
+        <!-- lista de noticias -->
+        <section class="temas">
+            <h2>Últimas notícias</h2>
+            <div class="noticias">
+                <article class="noticia">
+                    <h3>Reciclagem chega a 8,7% dos resíduos no Brasil</h3>
+                    <p class="noticia-info">08/12/2025 · Movimento Econômico (texto da Agência Brasil)</p>
+                    <p>O Panorama dos Resíduos Sólidos 2025, da Abrema, mostra que o país gerou 81,6 milhões de toneladas de lixo em 2024. Só 7,1 milhões de toneladas de resíduos secos foram reciclados, ou seja, 8,7% do total.</p>
+                    <a href="https://movimentoeconomico.com.br/meio-ambiente/2025/12/08/producao-de-residuos-cresce-em-2024-e-destinacao-adequada-melhora/" target="_blank" rel="noopener">Ler notícia completa (abre em nova aba)</a>
+                </article>
+                <article class="noticia">
+                    <h3>Lei de Cotas faz 35 anos e ainda não é cumprida</h3>
+                    <p class="noticia-info">24/07/2026 · CUT</p>
+                    <p>A lei que obriga empresas a contratar pessoas com deficiência completou 35 anos. Mesmo assim, só cerca de 759 mil pessoas com deficiência têm emprego formal, bem menos do que a lei poderia garantir.</p>
+                    <a href="https://www.cut.org.br/noticias/mercado-de-trabalho-ainda-descumpre-lei-de-cotas-35-anos-apos-sua-criacao-6127" target="_blank" rel="noopener">Ler notícia completa (abre em nova aba)</a>
+                </article>
+                <article class="noticia">
+                    <h3>Energia solar passa de R$ 300 bilhões em investimentos</h3>
+                    <p class="noticia-info">01/05/2026 · Agência Brasil</p>
+                    <p>Segundo a Absolar, o Brasil já tem 68,6 GW de energia solar em operação. Na última década, o setor gerou mais de 2 milhões de empregos, de instaladores a engenheiros.</p>
+                    <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-05/energia-solar-supera-r-300-bilhoes-em-investimentos" target="_blank" rel="noopener">Ler notícia completa (abre em nova aba)</a>
+                </article>
+                <article class="noticia">
+                    <h3>Empregos em energia renovável chegam a 16,6 milhões no mundo</h3>
+                    <p class="noticia-info">12/01/2026 · SolarQuarter (em inglês)</p>
+                    <p>Relatório da IRENA e da Organização Internacional do Trabalho mostra que os empregos em energia limpa cresceram, mas mais devagar do que antes. O Brasil aparece com 1,4 milhão de empregos no setor.</p>
+                    <a href="https://solarquarter.com/2026/01/12/irena-reports-uneven-global-job-growth-as-renewable-energy-employment-reaches-16-6-million-in-2024-despite-peak-capacity-additions/" target="_blank" rel="noopener">Ler notícia completa, em inglês (abre em nova aba)</a>
+                </article>
+                <article class="noticia">
+                    <h3>Cooperativa histórica de catadores recebe ordem de despejo em SP</h3>
+                    <p class="noticia-info">22/04/2026 · IstoÉ Dinheiro</p>
+                    <p>A Prefeitura de São Paulo pediu que a Coopamare saia da área embaixo do Viaduto Paulo VI, em Pinheiros, onde ela funciona há 37 anos. A cooperativa apresentou defesa e tenta continuar no local.</p>
+                    <a href="https://istoedinheiro.com.br/cooperativa-historica-de-catadores-recebe-ordem-de-despejo-em-sp" target="_blank" rel="noopener">Ler notícia completa (abre em nova aba)</a>
+                </article>
+                <article class="noticia">
+                    <h3>Cooperativas transformam descarte em renda e inclusão</h3>
+                    <p class="noticia-info">19/06/2026 · Agência Sebrae</p>
+                    <p>A reportagem visitou cooperativas de São Paulo e mostrou que muito material ainda chega misturado e acaba no aterro. Os catadores pedem que as pessoas separem melhor o lixo em casa e que o poder público reconheça mais o trabalho deles.</p>
+                    <a href="https://agenciasebrae.com.br/cultura-empreendedora/cooperativas-transformam-descarte-em-renda-e-inclusao-mas-cobram-reconhecimento-do-poder-publico-e-da-sociedade/" target="_blank" rel="noopener">Ler notícia completa (abre em nova aba)</a>
+                </article>
+            </div>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

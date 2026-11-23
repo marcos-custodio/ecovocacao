@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Galeria de imagens do EcoVocação, com legendas e fontes.">
+    <meta name="description" content="Ilustrações sobre reciclagem, energia limpa, inclusão e economia solidária.">
     <title>Galeria - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
+        </div>
+
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
         </div>
 
         <nav aria-label="Menu principal">
@@ -22,7 +34,7 @@
                 <li><a href="projetos.html">Projetos</a></li>
                 <li><a href="impacto.html">Impacto</a></li>
                 <li><a href="acessibilidade.html">Acessibilidade</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="galeria.html" aria-current="page">Galeria</a></li>
                 <li><a href="midia.html">Mídia</a></li>
                 <li><a href="noticias.html">Notícias</a></li>
                 <li><a href="contato.html">Contato</a></li>
@@ -31,21 +43,76 @@
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
             <h2>Galeria</h2>
-            <p>Aqui vão ficar as imagens do projeto, com legendas e fontes.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+            <p>O trabalho verde e inclusivo em imagens</p>
         </section>
+
+        <!-- explicacao -->
+        <section class="caixa-texto">
+            <h2>Sobre as imagens</h2>
+            <p>Todas as ilustrações desta galeria foram feitas pela equipe EcoVocação em SVG, um formato leve que ocupa pouco espaço e carrega rápido, o que também é uma forma de sustentabilidade digital. Passe o mouse sobre uma imagem para destacá-la.</p>
+        </section>
+
+        <!-- galeria de imagens -->
+        <section class="galeria-secao">
+            <h2>Ilustrações</h2>
+            <div class="galeria">
+                <figure class="galeria-item">
+                    <img src="img/coleta-seletiva.svg" alt="Quatro lixeiras de coleta seletiva lado a lado: azul com desenho de papel, vermelha com garrafa plástica, verde com garrafa de vidro e amarela com lata de metal" width="400" height="300">
+                    <figcaption><b>Coleta seletiva:</b> cada material tem sua cor. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/catador-carroca.svg" alt="Catadora de uniforme verde puxando uma carroça colorida cheia de papelão e garrafas por uma rua da cidade" width="400" height="300">
+                    <figcaption><b>Catadores:</b> responsáveis por cerca de 90% do que é reciclado no Brasil. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/cooperativa-reciclagem.svg" alt="Duas pessoas de uniforme verde e faixa amarela separando garrafas, latas e papelão em uma esteira dentro do galpão de uma cooperativa" width="400" height="300">
+                    <figcaption><b>Cooperativa de reciclagem:</b> trabalho organizado gera mais renda. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/energia-solar.svg" alt="Casa com duas placas solares azuis no telhado, sol forte no céu e um instalador de capacete amarelo subindo a escada" width="400" height="300">
+                    <figcaption><b>Energia solar:</b> instaladores estão entre as profissões verdes que mais crescem. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/energia-eolica.svg" alt="Duas turbinas eólicas brancas sobre morros verdes e uma técnica de capacete amarelo segurando um rádio" width="400" height="300">
+                    <figcaption><b>Energia eólica:</b> técnicos cuidam da instalação e da manutenção das turbinas. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/inclusao-trabalho.svg" alt="Pessoa em cadeira de rodas trabalhando no computador em uma mesa de escritório, com janela e planta ao lado" width="400" height="300">
+                    <figcaption><b>Inclusão PCD:</b> um ambiente adaptado permite que todos trabalhem. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/horta-comunitaria.svg" alt="Pessoa de blusa amarela regando uma horta comunitária com tomates, entre prédios da cidade" width="400" height="300">
+                    <figcaption><b>Horta comunitária:</b> alimento, renda e convivência no bairro. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+                <figure class="galeria-item">
+                    <img src="img/feira-economia-solidaria.svg" alt="Feira na praça com uma barraca listrada de vermelho e branco vendendo artesanato e outra verde vendendo frutas, com feirante e cliente" width="400" height="300">
+                    <figcaption><b>Economia solidária:</b> feiras fazem o dinheiro circular na própria comunidade. Fonte: ilustração autoral da equipe EcoVocação (2026).</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- chamada pra acao -->
+        <section class="caixa-texto chamada">
+            <h2>Quer ver em movimento?</h2>
+            <p>Na página de mídia tem um vídeo com legendas, um podcast com transcrição e um mapa.</p>
+            <a href="midia.html" class="botao">Ir para Mídia</a>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

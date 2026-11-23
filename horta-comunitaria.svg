@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- ceu e predios ao fundo -->
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <rect x="20" y="60" width="50" height="120" fill="#cfd8dc"/>
+  <rect x="80" y="90" width="40" height="90" fill="#b0bec5"/>
+  <rect x="300" y="50" width="60" height="130" fill="#cfd8dc"/>
+  <g fill="#eceff1">
+    <rect x="30" y="75" width="10" height="12"/><rect x="50" y="75" width="10" height="12"/>
+    <rect x="30" y="105" width="10" height="12"/><rect x="50" y="105" width="10" height="12"/>
+    <rect x="312" y="65" width="12" height="14"/><rect x="336" y="65" width="12" height="14"/>
+    <rect x="312" y="100" width="12" height="14"/><rect x="336" y="100" width="12" height="14"/>
+  </g>
+  <!-- terra -->
+  <rect x="0" y="180" width="400" height="120" fill="#6d4c41"/>
+  <rect x="0" y="180" width="400" height="10" fill="#7cb342"/>
+  <!-- canteiros com plantas -->
+  <g fill="#43a047">
+    <ellipse cx="60" cy="215" rx="14" ry="20"/><ellipse cx="110" cy="215" rx="14" ry="20"/>
+    <ellipse cx="160" cy="215" rx="14" ry="20"/><ellipse cx="60" cy="265" rx="14" ry="20"/>
+    <ellipse cx="110" cy="265" rx="14" ry="20"/><ellipse cx="160" cy="265" rx="14" ry="20"/>
+  </g>
+  <g fill="#e53935">
+    <circle cx="56" cy="210" r="4"/><circle cx="114" cy="220" r="4"/><circle cx="160" cy="262" r="4"/>
+  </g>
+  <!-- pessoa regando -->
+  <circle cx="270" cy="150" r="16" fill="#c68642"/>
+  <path d="M254 150 Q256 128 272 130 Q290 132 286 152 Q280 140 262 142 Z" fill="#212121"/>
+  <rect x="254" y="168" width="34" height="58" rx="11" fill="#f9a825"/>
+  <rect x="258" y="226" width="11" height="40" fill="#37474f"/>
+  <rect x="274" y="226" width="11" height="40" fill="#37474f"/>
+  <rect x="226" y="184" width="34" height="8" rx="4" fill="#c68642"/>
+  <!-- regador -->
+  <rect x="200" y="182" width="30" height="24" rx="4" fill="#1e88e5"/>
+  <path d="M200 188 L178 176 L176 180 L198 194 Z" fill="#1e88e5"/>
+  <g fill="#4fc3f7"><circle cx="172" cy="188" r="2"/><circle cx="168" cy="196" r="2"/><circle cx="176" cy="198" r="2"/></g>
+</svg>

@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projetos de sustentabilidade e impacto social do EcoVocação.">
+    <meta name="description" content="Seis projetos brasileiros de sustentabilidade, reciclagem, energia solar e inclusão.">
     <title>Projetos - EcoVocação</title>
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- link pra pular o menu (ajuda quem usa teclado ou leitor de tela) -->
+    <a href="#conteudo" class="pular">Pular para o conteúdo principal</a>
+
+    <!-- topo do site com logo e menu -->
     <header>
         <div class="logo">
             <img src="img/logo.svg" alt="Logo do EcoVocação: duas folhas verdes dentro de um círculo" width="50" height="50">
             <h1>EcoVocação</h1>
         </div>
 
+        <!-- botoes de acessibilidade (funcionam com o js/script.js) -->
+        <div class="barra-acessibilidade" role="group" aria-label="Opções de acessibilidade">
+            <button type="button" id="btnAumentar" aria-label="Aumentar o tamanho da letra">A+</button>
+            <button type="button" id="btnDiminuir" aria-label="Diminuir o tamanho da letra">A-</button>
+            <button type="button" id="btnContraste" aria-pressed="false">Alto contraste</button>
+        </div>
+
         <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="projetos.html" aria-current="page">Projetos</a></li>
                 <li><a href="impacto.html">Impacto</a></li>
                 <li><a href="acessibilidade.html">Acessibilidade</a></li>
                 <li><a href="galeria.html">Galeria</a></li>
@@ -31,21 +43,86 @@
         </nav>
     </header>
 
-    <main>
-        <!-- pagina ainda vai ser feita na entrega final -->
-        <section class="caixa-texto construcao">
-            <h2>Projetos</h2>
-            <p>Aqui vão ficar os projetos de sustentabilidade e impacto social.</p>
-            <p><b>Página em construção.</b> Disponível na entrega final do projeto.</p>
-            <a href="index.html" class="botao">Voltar para o início</a>
+    <main id="conteudo">
+
+        <!-- banner da pagina -->
+        <section class="banner">
+            <h2>Projetos que inspiram</h2>
+            <p>Iniciativas reais que unem meio ambiente, trabalho e inclusão</p>
         </section>
+
+        <!-- explicacao -->
+        <section class="caixa-texto">
+            <h2>Por que esses projetos?</h2>
+            <p>Escolhemos seis projetos brasileiros que mostram, na prática, que dá para cuidar do planeta e gerar trabalho ao mesmo tempo. Cada card tem um link para você saber mais na fonte.</p>
+        </section>
+
+        <!-- lista de projetos -->
+        <section class="temas">
+            <h2>Seis projetos de sustentabilidade e impacto social</h2>
+            <div class="cards">
+                <article class="card">
+                    <img src="img/catador-carroca.svg" alt="Ilustração de uma catadora puxando uma carroça colorida cheia de papelão e garrafas pela rua" width="400" height="300">
+                    <h3>Cataki</h3>
+                    <p class="tag">Reciclagem · Tecnologia</p>
+                    <p>Aplicativo criado pelo movimento Pimp My Carroça que conecta quem tem material reciclável em casa com catadores da região. Assim o catador recebe pelo serviço e o material não vai para o lixo comum.</p>
+                    <a href="https://www.brasildefato.com.br/2020/01/16/aplicativo-aumenta-renda-de-catadores-de-materiais-reciclaveis" target="_blank" rel="noopener">Saiba mais no Brasil de Fato (abre em nova aba)</a>
+                </article>
+                <article class="card">
+                    <img src="img/cooperativa-reciclagem.svg" alt="Ilustração de duas pessoas de uniforme verde separando garrafas e papelão numa esteira de cooperativa" width="400" height="300">
+                    <h3>Coopamare</h3>
+                    <p class="tag">Cooperativa · São Paulo</p>
+                    <p>Cooperativa de catadores fundada em 1989, embaixo de um viaduto em Pinheiros. É considerada a cooperativa de reciclagem mais antiga em funcionamento no Brasil e processa cerca de 100 toneladas de material por mês.</p>
+                    <a href="https://agenciasebrae.com.br/cultura-empreendedora/cooperativas-transformam-descarte-em-renda-e-inclusao-mas-cobram-reconhecimento-do-poder-publico-e-da-sociedade/" target="_blank" rel="noopener">Saiba mais na Agência Sebrae (abre em nova aba)</a>
+                </article>
+                <article class="card">
+                    <img src="img/energia-solar.svg" alt="Ilustração de uma casa com placas solares no telhado e um instalador subindo a escada" width="400" height="300">
+                    <h3>Revolusolar</h3>
+                    <p class="tag">Energia solar · Rio de Janeiro</p>
+                    <p>Organização que leva energia solar para as comunidades da Babilônia e do Chapéu Mangueira, no Rio. Além de instalar painéis, oferece cursos para moradores e ajudou a criar uma cooperativa de energia solar em favela.</p>
+                    <a href="https://canalsolar.com.br/brasil-tera-primeira-cooperativa-de-energia-solar-em-favela-do-rj/" target="_blank" rel="noopener">Saiba mais no Canal Solar (abre em nova aba)</a>
+                </article>
+                <article class="card">
+                    <img src="img/feira-economia-solidaria.svg" alt="Ilustração de uma feira na praça com duas barracas de produtos artesanais e frutas" width="400" height="300">
+                    <h3>Banco Palmas</h3>
+                    <p class="tag">Economia solidária · Fortaleza</p>
+                    <p>Banco comunitário criado em 1998 no Conjunto Palmeiras, em Fortaleza. Tem uma moeda social própria, a "palmas", que faz o dinheiro circular dentro do bairro e fortalece o comércio local.</p>
+                    <a href="https://www.politize.com.br/?p=13698" target="_blank" rel="noopener">Saiba mais no Politize! (abre em nova aba)</a>
+                </article>
+                <article class="card">
+                    <img src="img/inclusao-trabalho.svg" alt="Ilustração de uma pessoa em cadeira de rodas trabalhando no computador em um escritório" width="400" height="300">
+                    <h3>Instituto Jô Clemente</h3>
+                    <p class="tag">Inclusão PCD · São Paulo</p>
+                    <p>Instituição que trabalha pela inclusão de pessoas com deficiência intelectual e autismo, inclusive no mercado de trabalho, orientando as pessoas e as empresas que vão contratar.</p>
+                    <a href="https://jornaldobras.com.br/noticia/44073/e-book-criado-pelo-instituto-jo-clemente-ijc-destaca-a-importancia-de-incluir-pessoas-com-deficiencia-intelectual-e-autismo-no-mercado-de-trabalho" target="_blank" rel="noopener">Saiba mais no Jornal do Brás (abre em nova aba)</a>
+                </article>
+                <article class="card">
+                    <img src="img/coleta-seletiva.svg" alt="Ilustração de quatro lixeiras de coleta seletiva: azul para papel, vermelha para plástico, verde para vidro e amarela para metal" width="400" height="300">
+                    <h3>MNCR</h3>
+                    <p class="tag">Movimento social · Brasil</p>
+                    <p>O Movimento Nacional dos Catadores de Materiais Recicláveis organiza catadores do país todo e luta por reconhecimento da profissão, renda justa e participação na coleta seletiva das cidades.</p>
+                    <a href="https://www.mncr.org.br" target="_blank" rel="noopener">Site oficial do MNCR (abre em nova aba)</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- chamada pra acao -->
+        <section class="caixa-texto chamada">
+            <h2>Tem um projeto para divulgar?</h2>
+            <p>Se você participa de um projeto de sustentabilidade ou economia solidária, mande uma mensagem para a gente.</p>
+            <a href="contato.html" class="botao">Divulgar meu projeto</a>
+        </section>
+
     </main>
 
+    <!-- rodape -->
     <footer>
-        <p>EcoVocação - Projeto de Site MVP</p>
-        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul</p>
-        <p>Contato: contato@ecovocacao.com.br</p>
+        <p><b>EcoVocação</b> - Plataforma de Sustentabilidade, Empregabilidade e Impacto Social</p>
+        <p>Contato: <a href="mailto:contato@ecovocacao.com.br">contato@ecovocacao.com.br</a></p>
+        <p>Desenvolvimento Web - Prof. Paulo Fratta - Fatec São Caetano do Sul - 2026</p>
+        <p class="obs-rodape">Projeto acadêmico: a organização e os contatos são fictícios.</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- ceu -->
+  <rect width="400" height="300" fill="#e3f2fd"/>
+  <ellipse cx="90" cy="60" rx="40" ry="14" fill="#ffffff"/>
+  <ellipse cx="300" cy="45" rx="32" ry="11" fill="#ffffff"/>
+  <!-- morros -->
+  <path d="M0 230 Q100 170 200 220 Q300 160 400 210 L400 300 L0 300 Z" fill="#81c784"/>
+  <path d="M0 260 Q120 220 240 255 Q330 230 400 250 L400 300 L0 300 Z" fill="#43a047"/>
+  <!-- turbina grande -->
+  <polygon points="146,230 154,230 152,110 148,110" fill="#eceff1"/>
+  <circle cx="150" cy="108" r="6" fill="#b0bec5"/>
+  <g fill="#ffffff" stroke="#b0bec5" stroke-width="1.5">
+    <path d="M150 108 L146 40 L154 40 Z"/>
+    <path d="M150 108 L210 140 L205 147 Z"/>
+    <path d="M150 108 L92 142 L88 135 Z"/>
+  </g>
+  <!-- turbina pequena -->
+  <polygon points="287,220 293,220 291,140 289,140" fill="#eceff1"/>
+  <circle cx="290" cy="138" r="5" fill="#b0bec5"/>
+  <g fill="#ffffff" stroke="#b0bec5" stroke-width="1.5">
+    <path d="M290 138 L322 98 L326 103 Z"/>
+    <path d="M290 138 L300 188 L293 189 Z"/>
+    <path d="M290 138 L242 125 L244 118 Z"/>
+  </g>
+  <!-- tecnica com capacete -->
+  <circle cx="215" cy="232" r="11" fill="#8d5524"/>
+  <path d="M203 229 Q215 214 227 229 Z" fill="#f9a825"/>
+  <rect x="205" y="244" width="21" height="34" rx="7" fill="#1b5e20"/>
+  <rect x="198" y="254" width="12" height="6" rx="3" fill="#8d5524"/>
+  <rect x="190" y="248" width="10" height="14" rx="2" fill="#37474f"/>
+</svg>

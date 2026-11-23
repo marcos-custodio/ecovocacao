@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- praca -->
+  <rect width="400" height="300" fill="#e8f5e9"/>
+  <rect x="0" y="220" width="400" height="80" fill="#d7ccc8"/>
+  <circle cx="60" cy="90" r="40" fill="#66bb6a"/>
+  <rect x="55" y="120" width="10" height="100" fill="#6d4c41"/>
+  <!-- barraca 1 -->
+  <path d="M110 80 L230 80 L240 110 L100 110 Z" fill="#e53935"/>
+  <path d="M130 80 L150 80 L155 110 L125 110 Z M170 80 L190 80 L195 110 L165 110 Z M210 80 L230 80 L240 110 L205 110 Z" fill="#ffffff"/>
+  <rect x="110" y="110" width="6" height="110" fill="#5d4037"/>
+  <rect x="224" y="110" width="6" height="110" fill="#5d4037"/>
+  <rect x="105" y="170" width="130" height="14" fill="#8d6e63"/>
+  <!-- produtos artesanais -->
+  <rect x="120" y="150" width="20" height="20" rx="3" fill="#f9a825"/>
+  <circle cx="160" cy="160" r="10" fill="#43a047"/>
+  <rect x="180" y="146" width="16" height="24" rx="3" fill="#1e88e5"/>
+  <rect x="204" y="152" width="22" height="18" rx="3" fill="#ab47bc"/>
+  <!-- barraca 2 -->
+  <path d="M260 90 L370 90 L380 118 L250 118 Z" fill="#2e7d32"/>
+  <path d="M280 90 L300 90 L304 118 L276 118 Z M320 90 L340 90 L345 118 L316 118 Z" fill="#a5d6a7"/>
+  <rect x="258" y="118" width="6" height="102" fill="#5d4037"/>
+  <rect x="366" y="118" width="6" height="102" fill="#5d4037"/>
+  <rect x="253" y="175" width="124" height="14" fill="#8d6e63"/>
+  <circle cx="280" cy="166" r="9" fill="#fb8c00"/><circle cx="300" cy="166" r="9" fill="#fdd835"/><circle cx="320" cy="166" r="9" fill="#e53935"/>
+  <!-- feirante e cliente -->
+  <circle cx="170" cy="210" r="13" fill="#c68642"/>
+  <rect x="158" y="223" width="25" height="45" rx="8" fill="#1b5e20"/>
+  <circle cx="315" cy="215" r="13" fill="#f2c9a0"/>
+  <path d="M302 213 Q315 196 328 213 Z" fill="#6d4c41"/>
+  <rect x="303" y="228" width="25" height="45" rx="8" fill="#f9a825"/>
+  <rect x="290" y="238" width="16" height="16" rx="3" fill="#ffffff" stroke="#8d6e63" stroke-width="2"/>
+</svg>

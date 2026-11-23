@@ -1,0 +1,44 @@
+---
+description: Estrutura HTML5 semântica das páginas do EcoVocação
+globs: "*.html"
+alwaysApply: false
+---
+# HTML semântico – EcoVocação
+
+## 1. Objetivo
+Todas as páginas devem ter a mesma estrutura do index.html, com HTML5 semântico e válido no W3C.
+
+## 2. Contexto do projeto
+- HTML5 e CSS3 puros, sem frameworks.
+- As 10 páginas ficam na raiz do projeto; o estilo fica só em css/style.css.
+- Leia docs/plano-contexto.md para entender o tema do site.
+
+## 3. Regras
+- Começar com `<!DOCTYPE html>` e `<html lang="pt-BR">`.
+- No head: `meta charset="UTF-8"`, `meta viewport`, `meta description` e um `title` único no formato "Nome da página - EcoVocação".
+- Copiar o header (logo + menu), o nav e o footer do index.html, sem mudar os links do menu.
+- Conteúdo da página dentro de `<main>`, separado em `<section>`.
+- Títulos em ordem: h1 é o nome do site no header, cada seção começa com h2, subtítulos com h3.
+- Usar `<article>` para itens independentes (projeto, notícia), `<figure>` + `<figcaption>` para imagens da galeria e `<table>` com `<thead>` e `<tbody>` para dados.
+- Usar as classes que já existem no CSS: `caixa-texto`, `cards`, `card`, `botao`, `banner`, `obs`.
+- Comentários curtos explicando cada bloco, como no index.html.
+
+## 4. Exemplo
+```html
+<main>
+    <!-- lista de projetos -->
+    <section class="caixa-texto">
+        <h2>Nossos projetos</h2>
+        <p>Conheça os projetos de sustentabilidade que apoiamos.</p>
+    </section>
+</main>
+```
+
+## 5. Erros a evitar
+- Não usar `<div>` no lugar de header, nav, main, section, article e footer.
+- Não usar CSS inline (`style="..."`) nem `<style>` dentro da página.
+- Não usar tags antigas como `<font>` e `<center>`.
+- Não criar páginas novas nem mudar o menu sem a equipe pedir.
+
+## 6. Perguntas
+Se não souber qual conteúdo colocar ou em qual página, pergunte antes de criar.

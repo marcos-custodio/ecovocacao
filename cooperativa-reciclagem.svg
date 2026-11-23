@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- fundo do galpao -->
+  <rect width="400" height="300" fill="#f1f8e9"/>
+  <rect x="0" y="0" width="400" height="40" fill="#c5e1a5"/>
+  <rect x="0" y="230" width="400" height="70" fill="#a1887f"/>
+  <!-- fardos de material ao fundo -->
+  <rect x="20" y="150" width="60" height="80" rx="4" fill="#90caf9"/>
+  <rect x="25" y="160" width="50" height="4" fill="#64b5f6"/>
+  <rect x="25" y="190" width="50" height="4" fill="#64b5f6"/>
+  <rect x="320" y="140" width="64" height="90" rx="4" fill="#d7ccc8"/>
+  <rect x="325" y="155" width="54" height="4" fill="#bcaaa4"/>
+  <rect x="325" y="195" width="54" height="4" fill="#bcaaa4"/>
+  <!-- pessoa 1 -->
+  <circle cx="140" cy="95" r="20" fill="#c68642"/>
+  <path d="M120 88 Q140 62 160 88 Z" fill="#2e7d32"/>
+  <rect x="117" y="117" width="46" height="70" rx="14" fill="#2e7d32"/>
+  <rect x="121" y="130" width="38" height="6" fill="#f9a825"/>
+  <!-- pessoa 2 -->
+  <circle cx="260" cy="95" r="20" fill="#8d5524"/>
+  <path d="M240 90 Q260 66 280 90 L280 96 L240 96 Z" fill="#212121"/>
+  <rect x="237" y="117" width="46" height="70" rx="14" fill="#1b5e20"/>
+  <rect x="241" y="130" width="38" height="6" fill="#f9a825"/>
+  <!-- esteira de triagem -->
+  <rect x="60" y="180" width="280" height="22" rx="11" fill="#546e7a"/>
+  <rect x="80" y="202" width="10" height="30" fill="#455a64"/>
+  <rect x="310" y="202" width="10" height="30" fill="#455a64"/>
+  <!-- materiais na esteira -->
+  <rect x="100" y="164" width="12" height="18" rx="3" fill="#4fc3f7"/>
+  <rect x="104" y="160" width="4" height="5" fill="#0277bd"/>
+  <rect x="170" y="168" width="24" height="14" fill="#bcaaa4"/>
+  <circle cx="215" cy="174" r="8" fill="#b0bec5"/>
+  <rect x="290" y="162" width="11" height="20" rx="3" fill="#66bb6a"/>
+  <!-- bracos -->
+  <rect x="155" y="150" width="34" height="9" rx="4" fill="#c68642"/>
+  <rect x="213" y="150" width="34" height="9" rx="4" fill="#8d5524"/>
+  <!-- simbolo de reciclagem -->
+  <circle cx="200" cy="40" r="22" fill="#ffffff"/>
+  <path d="M190 48 L200 30 L210 48 Z" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linejoin="round"/>
+</svg>
